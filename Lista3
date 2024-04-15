@@ -1,0 +1,107 @@
+#Lista 3
+
+#Exercício 1) Valor absoluto
+
+def absoluto(valor):
+    if valor < 0:
+       return -valor
+    return valor
+valor=float(input("Insira um valor: "))
+print("O valor absoluto é: ",absoluto(valor))
+
+#Exercício 2) Quantas raízes possui a equação
+
+def raizes(a,b,c):
+       delta=(b**2-(4*a*c))
+       if delta=0:
+          return 1
+       if delta<0:
+          return 0
+       if delta>0:
+          return 2   
+a=int(input ("insira o valor de a: "))
+b=int(input ("insira o valor de b: "))
+c=int(input ("insira o valor de c: "))
+print ("A equação possui: ", raizes(a, b,c), “raízes”)
+
+#Exercício 3) Repetir o texto
+
+def repeteTexto(texto, n):
+    quantidade=n*texto
+    return quantidade
+texto=str(input("Insira o texto: "))
+n=int(input("Insira a quantidade de repetições: "))
+print(repeteTexto(texto, n))
+
+#Exercício 4) Data
+
+def data(dia, mes, ano):
+    concat=dia+"/"+mes+"/"+ano
+    return concat
+dia=str(input("Insira o dia: "))
+mes=str(input("Insira o mes: "))
+ano=str(input("Insira o ano: "))
+print("A data é: ", data(dia, mes, ano))
+
+#Exercício 5) Função
+
+def funcao(x):
+    if x<0:
+       return 0
+    elif 0<x<2:
+       return x
+    elif 2<=x<=3.5:
+       return 2
+    elif 3.5<x<=5:
+       return 3
+    else :
+       calc=x**2-10*x+28
+       return calc
+x=float(input("Insira o valor de entrada da função: "))
+print("O valor de saída é: ", funcao(x))
+
+#Exercício 6)a. Desconto do INSS
+
+def liquido(bruto):
+    if bruto<=2000:
+       return 0.06
+    elif bruto<=3000:
+       return 0.08
+    else
+       return 0.1
+bruto=float(input("Insira o salário bruto: "))
+print("O desconto será de: ", liquido(bruto))
+
+#Exercício 6)b. Desconto do IR
+
+def liquido(bruto):
+    if bruto<=2500:
+       return 0.11
+    elif bruto<=5000:
+       return 0.15
+    else
+       return 0.22
+bruto=float(input("Insira o salário bruto: "))
+print("O desconto será de: ", liquido(bruto))
+
+#Exercício 6)c.
+
+def INSS(bruto):
+    if bruto<=2000:
+       return 0.06
+    elif bruto<=3000:
+       return 0.08
+    else:
+       return 0.1
+def IR(bruto):
+    if bruto<=2500:
+       return 0.11
+    elif bruto<=5000:
+       return 0.15
+    else:
+       return 0.22
+def liquido(bruto):
+       calculo=bruto*(1-(INSS(bruto)+IR(bruto)))
+       return calculo
+bruto=float(input("Insira o salário bruto: "))
+print("O salário líquido será: ", liquido(bruto))
